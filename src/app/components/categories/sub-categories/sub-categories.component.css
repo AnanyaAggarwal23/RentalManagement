@@ -1,0 +1,12 @@
+.category-container {
+  padding: 10px;
+}
+
+mat-card {
+  padding: 0;
+}
+
+h4 {
+  padding: 5px;
+  background-color: cadetblue;
+}

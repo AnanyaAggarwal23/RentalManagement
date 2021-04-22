@@ -1,0 +1,31 @@
+<div class="header-container">
+    <div class="row">
+        <h4>RENTAL MANAGEMENT SYSTEM
+            <span class="multilevel-dd" (mouseenter)="openMyMenu()" [matMenuTriggerFor]="locations">Locations</span></h4>
+        
+    </div>
+    <!-- <h4>
+    <button mat-button >Locations</button>
+    </h4> -->
+</div>
+<mat-menu #locations="matMenu">
+    <div *ngFor="let location of data.locations">
+        <button mat-menu-item (mouseenter)="setSelectedLocation(location)" [matMenuTriggerFor]="menu">{{location.name}}</button>
+    </div>
+</mat-menu>
+
+<mat-menu #menu="matMenu">
+    <div *ngFor="let branch of selectedBranchList">
+        <button mat-menu-item (mouseenter)="setSelectedBranch(branch)">{{branch.name}}</button>
+    </div>
+</mat-menu>
+
+<!-- <mat-menu #WEST VIRGINIA="matMenu">
+    <button mat-menu-item>Insects</button>
+    <button mat-menu-item>Molluscs</button>
+    <button mat-menu-item>Crustaceans</button>
+    <button mat-menu-item>Corals</button>
+    <button mat-menu-item>Arachnids</button>
+    <button mat-menu-item>Velvet worms</button>
+    <button mat-menu-item>Horseshoe crabs</button>
+</mat-menu> -->

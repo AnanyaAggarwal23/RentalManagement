@@ -1,0 +1,17 @@
+.category-container {
+  padding: 10px;
+}
+
+.no-data {
+  text-align: -webkit-center;
+}
+
+mat-card {
+  padding: 0;
+}
+
+h4 {
+  padding: 5px;
+  background-color: cadetblue;
+  cursor: pointer;
+}

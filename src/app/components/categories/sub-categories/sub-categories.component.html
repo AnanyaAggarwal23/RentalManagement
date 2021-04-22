@@ -1,0 +1,8 @@
+<div class="row col-12">
+    <div *ngFor="let category of subCategoriesList" class="col-3 category-container">
+        <mat-card>
+            <img src="../../../assets/category/subcategory/{{category.image}}" alt="Image" width="200" height="200">
+            <h4>{{category.name}}</h4>
+        </mat-card>
+    </div>
+</div>

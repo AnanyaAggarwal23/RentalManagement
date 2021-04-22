@@ -1,0 +1,9 @@
+<app-header (selectedCategoriesList)="onSetCategories($event)"></app-header>
+<ul class="breadcrumb">
+    <li (click)="navigateToHome()"><a href="#">Equipment Catalog </a></li>
+    <li *ngIf="!showCategories"><a href="#"> / {{subCategory}}</a></li>
+</ul>
+<app-categories *ngIf="showCategories" [categoriesList]="categoriesList"
+    (selectedSubCategoriesList)="onSetSubCategories($event)"></app-categories>
+<app-sub-categories *ngIf="!showCategories" [subCategoriesList]="subCategoriesList">
+</app-sub-categories>    

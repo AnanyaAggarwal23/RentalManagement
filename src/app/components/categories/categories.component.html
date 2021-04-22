@@ -1,0 +1,15 @@
+<div *ngIf="categoriesList.length > 0; else nodata" class="row col-12">
+    <div *ngFor="let category of categoriesList" class="col-3 category-container">
+        <mat-card>
+            <img src="../../../assets/category/{{category.image}}" alt="Image" width="200" height="200">
+            <h4 (click)="setSelectedCategory(category)">{{category.name}}</h4>
+        </mat-card>
+    </div>  
+</div>
+<ng-template #nodata>
+    <div class="no-data">
+        <h3>Welcome to</h3>
+        <h3>Rental Management System</h3>
+        <h5>Please select Location</h5>
+    </div>
+</ng-template>
